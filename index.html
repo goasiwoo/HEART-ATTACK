@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 문구</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">🔮 마법의 NFC가 말하길... 🔮</p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "오늘 공휴일이야? 왜 천사가 내려와 있어?",
+                "너는 다 좋은데 하나만 고치면 좋을 거 같아. 내 심장.",
+                "아어 아아어아어아아 어어아. 널 보면 내 입이 안다물어져.",
+                "저기, 길 좀 물을게요. 당신의 마음속으로 가는 길이요.",
+                "승마장은 가지마세요. 말이 막히니까.",
+                "제 스타일이라서 그런데 인스타 ID좀 알 수 있을까요?",
+                "제 스타일이라서 그런데 전화번호 좀 알 수 있을까요?",
+                "제 스타일이에요.",
+                "너무 아름다우세요.",
+                "저기요, 혹시 타는 냄새 안나요? 내 마음이 타고 있거든요.",
+                "진짜 별로.. 내 마음속의 별로..",
+                "당신 떄문에 내 마음에 비가 와요. 심장마비."
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
